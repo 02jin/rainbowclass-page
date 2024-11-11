@@ -1,58 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Banner from '../assets/logo.png';
+import Logo from '../assets/logo.png';
 
 const Header = () => {
-  const headerStyle = {
-    backgroundColor: '#eeeeee',
-    padding: '30px',
-    color: 'white',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  };
-
-  const logoStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '20px',
-  };
-
-  const bannerStyle = {
-    width: '450px',  
-    height: 'auto',
-  };
-
-  const navStyle = {
-    display: 'flex',
-    gap: '35px',
-    marginRight: '50px',
-  };
-
-  const linkStyle = {
-    color: 'black',
-    textDecoration: 'none',
-    fontSize: '20px',
-    borderStyle: 'solid',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: 'white',
-    backgroundColor:'white',
-    padding: '5px 16px',  // 상하 8px, 좌우 16px의 패딩 추가
-    transition: 'background-color 0.3s', 
-  };
-
   return (
-    <header style={headerStyle}>
-      <div style={logoStyle}>
-        <img src={Banner} alt="무지개청춘교실 로고" style={bannerStyle} />
+    <header className="bg-[#2B2D42] text-white py-4 px-8">
+      <div className="container mx-auto flex justify-between items-center">
+        <Link to="/" className="flex items-center">
+          <img src={Logo} alt="Digital Agency Logo" className="h-8" />
+        </Link>
+        
+        <nav className="flex gap-8 items-center">
+          <Link to="/" className="hover:text-blue-300 transition-colors">Home</Link>
+          <Link to="/about" className="hover:text-blue-300 transition-colors">About</Link>
+          <Link to="/services" className="hover:text-blue-300 transition-colors">Services</Link>
+          <Link to="/contact" className="hover:text-blue-300 transition-colors">Contact</Link>
+          <Link to="/quote" className="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-md transition-colors">
+            REQUEST QUOTE
+          </Link>
+        </nav>
       </div>
-      <nav style={navStyle}>
-        <Link to="/introduction" style={linkStyle}>소개</Link>
-        <Link to="/main-activities" style={linkStyle}>주요활동</Link>
-        <Link to="/announcements" style={linkStyle}>공지사항</Link>
-        <Link to="/free-board" style={linkStyle}>자유게시판</Link>
-      </nav>
     </header>
   );
 };
