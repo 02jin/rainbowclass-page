@@ -1,6 +1,6 @@
 import '../styles/App.css'
 
-function App() {
+function Announcement() {
     return (
         <div className='App'>
             <div className='header'>
@@ -18,6 +18,6 @@ function App() {
             </div>
         </div>
     )
-}
+};
 
 export default Announcement;

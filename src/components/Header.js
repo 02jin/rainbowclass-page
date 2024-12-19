@@ -4,18 +4,57 @@ import Logo from '../assets/logo.png';
 
 const Header = () => {
   return (
-    <header className="bg-[#2B2D42] text-white py-4 px-8">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center">
-          <img src={Logo} alt="Digital Agency Logo" className="h-8" />
-        </Link>
-        
-        <nav className="flex gap-8 items-center">
-          <Link to="/" className="hover:text-blue-300 transition-colors">Home</Link>
-          <Link to="../pages/Introduction.js" className="hover:text-blue-300 transition-colors">소개</Link>
-          <Link to="../pages/Announcement.js" className="hover:text-blue-300 transition-colors">공지사항</Link>
-          <Link to="../pages/MainActivity.js" className="hover:text-blue-300 transition-colors">주요활동</Link>
-        </nav>
+    <header className="bg-white shadow-md">
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex flex-col items-center">
+          {/* 로고 섹션 */}
+          <Link to="/" className="flex items-center mb-4">
+            <img 
+              src={Logo} 
+              alt="무지개청춘교실 로고" 
+              className="h-16"
+            />
+            
+          </Link>
+          
+          {/* 네비게이션 메뉴 */}
+          <nav className="w-full max-w-xl">
+            <ul className="flex justify-between items-center">
+              <li>
+                <Link 
+                  to="/" 
+                  className="text-lg hover:text-blue-500 transition-colors duration-200"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/introduction" 
+                  className="text-lg hover:text-blue-500 transition-colors duration-200"
+                >
+                  소개
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/announcement" 
+                  className="text-lg hover:text-blue-500 transition-colors duration-200"
+                >
+                  공지사항
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/mainactivity" 
+                  className="text-lg hover:text-blue-500 transition-colors duration-200"
+                >
+                  주요활동
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
   );

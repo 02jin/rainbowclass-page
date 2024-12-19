@@ -1,4 +1,8 @@
 /* Home.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .home-container {
     max-width: 1200px;
     margin: 0 auto;

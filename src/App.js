@@ -14,10 +14,10 @@ function App() {
         <Header />
         <div className="content">
           <Routes>
-            <Route path="./pages/Home.js" element={<Home />} />
-            <Route path="./pages/Announcement.js" element={<Announcement />} />
-            <Route path="./pages/Introduction.js" element={<Introduction />} />
-            <Route path="./pages/MainActivity.js" element={<MainActivity />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/announcement" element={<Announcement />} />
+            <Route path="/introduction" element={<Introduction />} />
+            <Route path="/mainactivity" element={<MainActivity />} />
           </Routes>
         </div>
       </div>
