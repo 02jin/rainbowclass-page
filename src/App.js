@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home"
 import './styles/App.css';  
+import Introduction from "./pages/Introduction";
+import Announcement from "./pages/Announcement";
+import MainActivity from "./pages/MainActivity";
 
 function App() {
   return (
@@ -11,35 +14,15 @@ function App() {
         <Header />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="./pages/Home.js" element={<Home />} />
+            <Route path="./pages/Announcement.js" element={<Announcement />} />
+            <Route path="./pages/Introduction.js" element={<Introduction />} />
+            <Route path="./pages/MainActivity.js" element={<MainActivity />} />
           </Routes>
         </div>
       </div>
     </Router>
   );
 }
-
-// Placeholder components with new design
-const About = () => (
-  <div className="page-container">
-    <h1>About Us</h1>
-    <p>회사 소개 내용이 들어갈 자리입니다.</p>
-  </div>
-);
-const Services = () => (
-  <div className="page-container">
-    <h1>Our Services</h1>
-    <p>서비스 내용이 들어갈 자리입니다.</p>
-  </div>
-);
-const Contact = () => (
-  <div className="page-container">
-    <h1>Contact Us</h1>
-    <p>연락처 정보가 들어갈 자리입니다.</p>
-  </div>
-);
 
 export default App;

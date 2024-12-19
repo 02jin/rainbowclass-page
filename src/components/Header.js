@@ -12,12 +12,9 @@ const Header = () => {
         
         <nav className="flex gap-8 items-center">
           <Link to="/" className="hover:text-blue-300 transition-colors">Home</Link>
-          <Link to="/about" className="hover:text-blue-300 transition-colors">About</Link>
-          <Link to="/services" className="hover:text-blue-300 transition-colors">Services</Link>
-          <Link to="/contact" className="hover:text-blue-300 transition-colors">Contact</Link>
-          <Link to="/quote" className="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-md transition-colors">
-            REQUEST QUOTE
-          </Link>
+          <Link to="../pages/Introduction.js" className="hover:text-blue-300 transition-colors">소개</Link>
+          <Link to="../pages/Announcement.js" className="hover:text-blue-300 transition-colors">공지사항</Link>
+          <Link to="../pages/MainActivity.js" className="hover:text-blue-300 transition-colors">주요활동</Link>
         </nav>
       </div>
     </header>
